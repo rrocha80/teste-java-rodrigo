@@ -1,31 +1,22 @@
 package br.com.spassu.cliente.domain;
 
+import lombok.Data;
+
+@Data
 public class Cliente {
-	
-	private int id;
+
+	private Integer id;
 	private String Nome;
-	private CidadeEnum Cidade;
-	
+	private String Cidade;
+
 	public Cliente() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public int getId() {
-		return id;
+
+	@Override
+	public String toString() {
+		return "Cliente [id=" + id + ", Nome=" + Nome + ", Cidade=" + Cidade + "]";
 	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public String getNome() {
-		return Nome;
-	}
-	public void setNome(String nome) {
-		Nome = nome;
-	}
-	public CidadeEnum getCidade() {
-		return Cidade;
-	}
-	public void setCidade(CidadeEnum cidade) {
-		Cidade = cidade;
-	}
+
 }
